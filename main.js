@@ -37,7 +37,7 @@ function clearProduct() {
 
 
 function displayProduct() {
-    data = " "
+    let data = " ";
     for (let i = 0; i < productContainer.length; i++) {
         data += `<tr>
                 <th scope="row">${i + 1}</th>
@@ -48,9 +48,10 @@ function displayProduct() {
                 <td><button class="btn btn-danger" onclick="deleteProduct(${i})">Delete</button></td>
                 <td><button class="btn btn-info" onclick="updateProduct(${i})">Update</button></td>
               </tr>`
-
-        document.getElementById("demo").innerHTML = data
     }
+
+    document.getElementById("demo").innerHTML = data
+
 }
 
 function deleteProduct(index) {
